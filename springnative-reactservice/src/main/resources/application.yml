@@ -29,7 +29,7 @@ spring:
   r2dbc:
     username: sa
     password: 
-    url: r2dbc:h2:file:///./target/data/products-db    
+    url: r2dbc:h2:file:///./target/data-react/products-db
     pool:
       max-create-connection-time: 5s
       initial-size: 5

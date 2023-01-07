@@ -12,3 +12,7 @@
 /springnative-restservice-jpa/.idea/
 /springnative-restservice-jpa/target/
 /springnative-restservice-jpa/springnative-restservice-jpa.iml
+/config-eureka-service/target/
+/discovery-eureka-service/target/classes/
+/discovery-eureka-service/.idea/
+/discovery-eureka-service/discovery-eureka-service.iml
