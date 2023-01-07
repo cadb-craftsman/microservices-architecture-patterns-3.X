@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: config-eureka-service
+  labels:
+    app: config-eureka-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: config-eureka-service
+  template:
+    metadata:
+      labels:
+        app: config-eureka-service
+    spec:
+      containers:
+        - name: config-eureka-service
+          image: cadbcraftsman/config-eureka-service
+          imagePullPolicy: IfNotPresent
+          lifecycle:
+            preStop:
+              exec:
+                command: [ "sh", "-c", "sleep 5" ]
+          ports:
+            - containerPort: 8888
+          env:
+            - name: BPL_JVM_THREAD_COUNT
+              value: "50"

@@ -1,0 +1,14 @@
+/config-eureka-service/.idea/
+/config-eureka-service/target/classes/
+/config-eureka-service/config-eureka-service.iml
+/discovery-service/discovery-service.iml
+/discovery-service/target/classes/
+/discovery-service/.idea/
+/target/
+/.idea/
+/springnative-reactservice/.idea/
+/springnative-reactservice/target/
+/springnative-reactservice/springnative-reactservice.iml
+/springnative-restservice-jpa/.idea/
+/springnative-restservice-jpa/target/
+/springnative-restservice-jpa/springnative-restservice-jpa.iml
