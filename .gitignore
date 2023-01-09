@@ -16,3 +16,15 @@
 /discovery-eureka-service/target/classes/
 /discovery-eureka-service/.idea/
 /discovery-eureka-service/discovery-eureka-service.iml
+/config-consul-service/.idea/
+/config-consul-service/target/
+/config-consul-service/config-consul-service.iml
+/discovery-eureka-service/target/
+/edge-consul-service/.idea/
+/edge-consul-service/edge-consul-service.iml
+/springnative-consul-reactservice/.idea/
+/springnative-consul-reactservice/target/
+/springnative-consul-reactservice/springnative-consul-reactservice.iml
+/springnative-consul-restservice-jpa/.idea/
+/springnative-consul-restservice-jpa/target/
+/springnative-consul-restservice-jpa/springnative-consul-restservice-jpa.iml

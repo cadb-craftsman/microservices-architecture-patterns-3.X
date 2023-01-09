@@ -1,13 +1,13 @@
 ############## Info properties ###############
 info:
-  system: 'springnative-backend-jpa'
+  system: 'springnative-consul-restservice-jpa'
   app:
-    name: 'springnative-backend-jpa'
+    name: 'springnative-consul-restservice-jpa'
     version: '1.0.0-SNAPSHOT'
 ############## Spring App properties ###############
 spring:
   application:
-    name: 'springnative-backend-jpa'
+    name: 'springnative-consul-restservice-jpa'
   lifecycle:
     timeout-per-shutdown-phase: 15s  
   config:
@@ -25,9 +25,13 @@ spring:
         initial-interval: 1000
         max-interval: 2000
         multiplier: 1.1
+    ############## Discovery Consul Config ###############
+    consul:
+      host: localhost
+      port: 8500
   ############## Datasource configuration ###############
   datasource:
-    url: jdbc:h2:file:./target/data-rest/products-db
+    url: jdbc:h2:file:./target/data/rest/products-db
     driverClassName: org.h2.Driver
     username: sa
     password:
@@ -43,12 +47,7 @@ spring:
   h2:
     console.enabled: true
     console.path: /h2-console
-    console.settings.trace: false
-############## Eureka client properties ###############
-eureka:
-  client:
-   serviceUrl:
-      defaultZone: http://localhost:8761/eureka/    
+    console.settings.trace: false 
 ############## Management properties ###############
 management:
   endpoints:
@@ -70,7 +69,7 @@ management:
       enabled: true
   metrics:
     tags:
-      application: 'springnative-backend-jpa'
+      application: 'springnative-consul-restservice-jpa'
 ############## Server properties ###############
 server:
   port: 8080
@@ -101,6 +100,7 @@ springdoc:
     version: 'OPENAPI_3_0'  
   swagger-ui:
     path: /openapi/swagger-ui.html
+  enable-native-support: true    
 ############## OpenApi properties ###############
 app:
   openapi:

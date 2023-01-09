@@ -1,13 +1,12 @@
-package com.craftsman.restservice;
+package com.craftsman.edgeservice.edgeservice;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-
 @SpringBootApplication
-public class RestServiceApp {
+public class EdgeServiceApp {
 
 	public static void main(String[] args) {
-		SpringApplication.run(RestServiceApp.class, args);
+		SpringApplication.run(EdgeServiceApp.class, args);
 	}
 }
