@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: springnative-backend-openapi-mybatis
+  name: springnative-consul-restservice-jpa
   labels:
-    app: springnative-backend-openapi-mybatis
+    app: springnative-consul-restservice-jpa
 spec:
   type: ClusterIP
   selector:
-    app: springnative-backend-openapi-mybatis
+    app: springnative-consul-restservice-jpa
   ports:
   - protocol: TCP
     port: 80
