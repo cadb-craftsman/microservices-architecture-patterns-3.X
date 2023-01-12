@@ -24,6 +24,6 @@ spec:
             - name: BPL_JVM_THREAD_COUNT
               value: "50"
             - name: SPRING_CLOUD_CONSUL_HOST
-              value: "http://192.168.0.14"
+              value: http://192.168.0.14
             - name: SPRING_CLOUD_CONSUL_PORT
               value: "8500"
