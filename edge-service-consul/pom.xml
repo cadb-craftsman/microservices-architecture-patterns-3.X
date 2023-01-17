@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.craftsman.edgeservice</groupId>
+	<artifactId>edge-service-consul</artifactId>
+	<name>edge-service-consul</name>
+	<packaging>jar</packaging>
+	<description>EdgeService archetype</description>
+	<version>1.0.0-SNAPSHOT</version>
+	<parent>
+		<groupId>com.craftsman.cloudnative</groupId>
+		<artifactId>springnative-cloud-starter-bom</artifactId>
+		<version>3.0.1-SNAPSHOT</version> <!-- lookup parent from repository -->
+	</parent>
+	<dependencies>
+		<!-- Springcloud Config Server -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-gateway</artifactId>
+		</dependency>
+		<!-- Spring Cloud Consul Client -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-consul-discovery</artifactId>
+		</dependency>
+	</dependencies>
+</project>

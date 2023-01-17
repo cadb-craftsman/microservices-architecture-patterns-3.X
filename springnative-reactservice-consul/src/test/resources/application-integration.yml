@@ -1,0 +1,9 @@
+############## Spring App properties ###############
+spring:
+  r2dbc:
+    username: sa
+    password: 
+    url: r2dbc:h2:file:///./target/data/react/products-db-test    
+
+#  datasource:
+#    url: r2dbc:h2:file:///./target/data/react/products-db-test    

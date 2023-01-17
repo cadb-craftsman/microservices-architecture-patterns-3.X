@@ -1,0 +1,111 @@
+############## Info properties ###############
+info:
+  system: '@project.artifactId@'
+  app:
+    name: '@project.artifactId@'
+    version: '@project.version@' 
+############## Spring App properties ###############
+spring:
+  application:
+    name: '@project.artifactId@'
+  lifecycle:
+    timeout-per-shutdown-phase: 15s  
+  config:
+    #(Only for local environment.)
+    import: "optional:configserver:" 
+  cloud:
+    config: 
+      enabled: true    
+      uri: http://localhost:8888
+      request-connect-timeout: 5000
+      request-read-timeout: 5000
+      #(Only for local environment, for production set true.)
+      fail-fast: false 
+      retry:
+        max-attempts: 6
+        initial-interval: 1000
+        max-interval: 2000
+        multiplier: 1.1
+  profiles:
+    active:
+    - default    
+    ############## Discovery Consul Config ###############
+    consul:
+      enabled: true
+      host: localhost
+      port: 8500          
+  ############## Datasource configuration H2 ###############
+  r2dbc:
+    username: sa
+    password: 
+    url: r2dbc:h2:file:///./target/data/react/products-db    
+    pool:
+      max-create-connection-time: 5s
+      initial-size: 5
+      max-size: 10
+  h2:
+    console.enabled: true
+    console.path: /h2-console
+    console.settings.trace: true
+############## Management properties ###############
+management:
+  endpoints:
+    web:
+      exposure:
+        include: env, health, heapdump, info, loggers, mappings
+  endpoint:
+    health:
+      show-details: always
+      show-components: always
+      probes:
+        enabled: true
+  info:
+    env:
+      enabled: true
+    java:
+      enabled: true
+    os:
+      enabled: true
+  metrics:
+    tags:
+      application: '@project.artifactId@'      
+############## Server properties ###############
+server:
+  port: 8080
+  shutdown: graceful
+  netty:
+    connection-timeout: 5s
+    idle-timeout: 15s
+  compression:
+    enabled: true
+    mime-types: text/html,text/xml,text/plain,text/css,text/javascript,application/javascript,application/json
+    min-response-size: 1024
+  http2:
+    enabled: true  
+############## Log properties ###############
+logging:
+  level:
+    '[@project.groupId@]': DEBUG
+############## Springdoc properties ###############    
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+    version: 'OPENAPI_3_0'  
+  swagger-ui:
+    use-root-path: true
+  enable-native-support: true    
+############## OpenApi properties ###############
+app:
+  openapi:
+    group: reactservice
+    title: Reactive API
+    description: This is a Reactive Api.
+    license: 
+      name: Apache 2.0
+      url: https://opensource.org/licenses/Apache-2.0
+    contact:
+      name: Craftsman
+      url: http://cadb-craftsman.com
+    package: com.craftsman.reactservice.controller
+    path: /api/v1/reactservice/**    
